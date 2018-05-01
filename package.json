@@ -1,6 +1,6 @@
 {
   "name": "lapp",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "lapp = little app, lapp mainly focus on ui component which can be easily developed with OOP or functional programing!",
   "main": "bin/index.js",
   "module": "bin/index.esm.js",
