@@ -5,6 +5,7 @@ we provide two versions:
 - bin/index.js - pure MVVM framework. (3.2kb gzip)
 - bin/all.js - MVVM framework with IF/ELSE/FOR component inside.(4.5kb gzip)
 
+recommend use [lapp-startup](https://github.com/chalecao/lapp-startup) as your base project!
 
 ## npm module
 you can install lapp:
