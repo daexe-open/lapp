@@ -1,11 +1,11 @@
-import { l } from "../src/index"
+import { l } from '../src/index'
 const state = {
   count: 0
 }
 
 export const actions = {
   addCount: () => {
-    state.count++;
+    state.count++
     MyButtonView.$update()
   }
 }

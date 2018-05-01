@@ -65,7 +65,7 @@ export const deepClone = (obj) => {
   return result
 }
 
-export function toArray(listLike) {
+export function toArray (listLike) {
   if (!listLike) {
     return []
   }

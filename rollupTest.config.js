@@ -12,22 +12,22 @@ export default [{
     format: 'iife'
   },
   banner: '// lapp - fed123.com',
-  footer: "",
+  footer: '',
   external: [],
   paths: {
     pjson: '../package.json'
   },
   plugins: [
     babel({
-      "presets": [[
-        "env",
+      'presets': [[
+        'env',
         {
-          "modules": false
+          'modules': false
         }
       ]],
-      "plugins": [
-        ["transform-react-jsx", {
-          "pragma": "l"
+      'plugins': [
+        ['transform-react-jsx', {
+          'pragma': 'l'
         }]
         // "external-helpers"//注意这个参数不能加，加了之后模块exports有问题，坑坑坑
       ]
@@ -45,22 +45,22 @@ export default [{
     format: 'iife'
   },
   banner: '// lapp - fed123.com',
-  footer: "",
+  footer: '',
   external: [],
   paths: {
     pjson: '../package.json'
   },
   plugins: [
     babel({
-      "presets": [[
-        "env",
+      'presets': [[
+        'env',
         {
-          "modules": false
+          'modules': false
         }
       ]],
-      "plugins": [
-        ["transform-react-jsx", {
-          "pragma": "l"
+      'plugins': [
+        ['transform-react-jsx', {
+          'pragma': 'l'
         }]
         // "external-helpers"//注意这个参数不能加，加了之后模块exports有问题，坑坑坑
       ]

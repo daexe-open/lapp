@@ -1,4 +1,4 @@
-import { isUndefined, isSVG, isString, isNumber, isFunction, isClass, isNull, isNative, isThunk, isText, isSameThunk } from './util'
+import { isUndefined, isSVG, isString, isNumber, isClass, isNull } from './util'
 import { updateAttributes } from './attribute'
 import { addEventListeners } from './event'
 

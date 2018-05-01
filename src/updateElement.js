@@ -9,7 +9,7 @@ import { updateAttributes } from './attribute'
  * @param index - child index in parent
  * @returns node
  */
-export function updateElement(node, pre, next, index = 0) {
+export function updateElement (node, pre, next, index = 0) {
   if (!node) return
   if (pre === next && pre.type != 'thunk') return node // fix bug, shou test type after, because pre may undefined when create new node
 
@@ -70,7 +70,7 @@ export function updateElement(node, pre, next, index = 0) {
  * @param index - child index in parent
  * @returns node
  */
-export function updateTarget(node, pre, next, index = 0) {
+export function updateTarget (node, pre, next, index = 0) {
   if (!isUndefined(pre) && isUndefined(next)) {
     return removeNode(node, pre, next, index)
   }
@@ -120,7 +120,7 @@ export function updateTarget(node, pre, next, index = 0) {
  * @param next
  * @param index
  */
-function removeNode(node, pre, next, index) {
+function removeNode (node, pre, next, index) {
   removeThunk(pre)
   node.removeChild(node.childNodes[index])
 }
@@ -132,7 +132,7 @@ function removeNode(node, pre, next, index) {
  * @param next
  * @param index
  */
-function replaceNode(node, pre, next, index) {
+function replaceNode (node, pre, next, index) {
   let newNode = createElement(next)
   removeThunk(pre)
   node.replaceChild(newNode, node.childNodes[index])
@@ -143,7 +143,7 @@ function replaceNode(node, pre, next, index) {
  * thunk元素销毁时处理onRemove
  * @param vnode
  */
-function removeThunk(vnode) {
+function removeThunk (vnode) {
   while (isThunk(vnode)) {
     let { onRemove } = vnode.options
     let { model } = vnode.state
@@ -162,7 +162,7 @@ function removeThunk(vnode) {
  * @param next
  * @param index
  */
-function diffChildren(node, pre, next, index) {
+function diffChildren (node, pre, next, index) {
   let preChildren = pre.children || []
   let nextChildren = next.children || []
   let i
@@ -180,7 +180,7 @@ function diffChildren(node, pre, next, index) {
 /**
 * 更新thunk
 */
-function updateThunk(node, pre, next, index) {
+function updateThunk (node, pre, next, index) {
   let { props, children } = next
   let model = {
     children,
@@ -208,6 +208,6 @@ function updateThunk(node, pre, next, index) {
   return node
 }
 
-function replaceThunk() {
+function replaceThunk () {
   return updateThunk.apply(null, arguments)
 }

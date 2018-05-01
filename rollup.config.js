@@ -1,7 +1,7 @@
 import buble from 'rollup-plugin-buble'
 import babel from 'rollup-plugin-babel'
 import uglify from 'rollup-plugin-uglify'
-import { minify } from 'uglify-es';
+import { minify } from 'uglify-es'
 
 export default [{
   input: 'src/index.js',
@@ -10,23 +10,24 @@ export default [{
     format: 'cjs'
   },
   banner: '// lapp - fed123.com',
-  footer: "",
+  footer: '',
   external: [],
   paths: {
     pjson: '../package.json'
   },
   plugins: [
     babel({
-      "presets": [[
-        "env",
+      'presets': [[
+        'env',
         {
-          "modules": false
+          'modules': false
         }
       ]],
-      "plugins": [
-        ["transform-react-jsx", {
-          "pragma": "l"
-        }]
+      'plugins': [
+        ['transform-react-jsx', {
+          'pragma': 'l'
+        }],
+        "external-helpers"
         // "external-helpers"//注意这个参数不能加，加了之后模块exports有问题，坑坑坑
       ]
     }),
@@ -40,24 +41,25 @@ export default [{
     format: 'cjs'
   },
   banner: '// lapp with IF/ELSE/FOR component - fed123.com',
-  footer: "",
+  footer: '',
   external: [],
   paths: {
     pjson: '../package.json'
   },
   plugins: [
     babel({
-      "presets": [[
-        "env",
+      'presets': [[
+        'env',
         {
-          "modules": false
+          'modules': false
         }
       ]],
-      "plugins": [
-        ["transform-react-jsx", {
-          "pragma": "l"
-        }]
+      'plugins': [
+        ['transform-react-jsx', {
+          'pragma': 'l'
+        }],
         // "external-helpers"//注意这个参数不能加，加了之后模块exports有问题，坑坑坑
+        "external-helpers"
       ]
     }),
     buble(),

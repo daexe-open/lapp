@@ -3,9 +3,6 @@ import l from '../create'
 import { JSON2Hash, deepClone } from '../util'
 
 class forBox extends component {
-  constructor () {
-    super()
-  }
   handlePath (item, hashData) {
     let paths = item.match(/__(.*?)__/g)
     let d = ''

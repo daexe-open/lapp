@@ -2,11 +2,7 @@ import component from '../component'
 import l from '../create'
 import { deepClone, findChildren } from '../util'
 class elseBox extends component {
-  constructor() {
-    super()
-  }
-
-  render({ props, children }) {
+  render ({ props, children }) {
     if (props && Object.keys(props).indexOf('cond') >= 0) {
       let elseChildren = findChildren(children, 'else')
 
