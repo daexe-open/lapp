@@ -1,8 +1,8 @@
 ## lapp
 lapp = lapp = little app, lapp mainly focus on ui component which can be easily developed with OOP or functional programing!
-just 9kb MVVM framework! we provide two versions:
-bin/index.js - pure MVVM framework.
-bin/all.js - MVVM framework with IF/ELSE/FOR component inside.
+we provide two versions:
+bin/index.js - pure MVVM framework. (3.2kb gzip)
+bin/all.js - MVVM framework with IF/ELSE/FOR component inside.(4.5kb gzip)
 
 
 ## npm module
